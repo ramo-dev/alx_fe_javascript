@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     quoteDisplay.innerHTML = `<p>"${randomQuote.text}" - <em>${randomQuote.category}</em></p>`;
   }
 
-  function addQuote() {
+  function createAddQuoteForm() {
     const newQuoteText = document.getElementById('newQuoteText').value.trim();
     const newQuoteCategory = document.getElementById('newQuoteCategory').value.trim();
     if (newQuoteText && newQuoteCategory) {
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   newQuoteButton.addEventListener('click', showRandomQuote);
-  addQuoteButton.addEventListener('click', addQuote);
+  addQuoteButton.addEventListener('click', createAddQuoteForm);
   exportQuotesButton.addEventListener('click', exportQuotesToJson);
   importFileInput.addEventListener('change', importFromJsonFile);
   categoryFilter.addEventListener('change', filterQuotes);
